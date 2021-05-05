@@ -13,6 +13,6 @@ jobs:
         uses: docker/build-push-action@v1
         with:
           username: ${{ atomsbeijing }}
-          password: ${{ secrets.datoms-FCCG-510211 }}
+          password: ${{ secrets.pub_docker_pass}}
           repository: atomsbeijing/datube
           tag_with_ref: true
