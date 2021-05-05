@@ -12,7 +12,7 @@ jobs:
       - name: Push to Docker Hub
         uses: docker/build-push-action@v1
         with:
-          username: ${{ secrets.atomsbeijing }}
-          password: ${{ secrets.datoms-FCCG-510211 }}
+          username: ${{ atomsbeijing }}
+          password: ${{ secrets.docker_hub_Pass }}
           repository: atomsbeijing/datube
           tag_with_ref: true
