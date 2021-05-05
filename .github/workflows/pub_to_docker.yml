@@ -15,34 +15,17 @@ jobs:
   runs-on: ubuntu-latest
   #
   steps:
+  
    - uses: actions/checkout@v2
-  #
-   - name: Run tests
-     run: |
-        if [ -f docker-compose.test.yml ]; then
-          docker-compose --file docker-compose.test.yml build
-          docker-compose --file docker-compose.test.yml run sut
-        else
-          docker build . --file Dockerfile
-        fi
-  
-  push:
-    needs:test
-  
-  
-runs-on: ubuntu-latest
-
-steps:
- - uses: actions/checkout@v2
         # 构建镜像，指定镜像名
- - name: Build  image
-   run: docker build . --file Dockerfile --tag $IMAGE_NAME
+   - name: Build  image
+     run: docker build . --file Dockerfile --tag $IMAGE_NAME
         # 登录到 dockerhub，使用 GitHub secrets 传入账号密码，密码被加密存储在 GitHub 服务器，添加方法见下图。
- - name: Log into registry
-   run: echo "${{ secrets.DOCKER_ACCESS_TOKEN }}" | docker login -u libra146 --password-stdin
+   - name: Log into registry
+     run: echo "${{ secrets.DOCKER_ACCESS_TOKEN }}" | docker login -u libra146 --password-stdin
 
- - name: Push image
-   run: |
+   - name: Push image
+     run: |
               IMAGE_ID = $IMAGE_NAME
 
               IMAGE_ID=$(echo $IMAGE_ID | tr '[A-Z]' '[a-z]')
