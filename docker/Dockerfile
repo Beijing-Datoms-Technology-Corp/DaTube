@@ -1,5 +1,5 @@
 FROM ruby:2.5.7
-MAINTAINER "Christoph Fabianek" christoph@ownyourdata.eu
+MAINTAINER "Jerry Zhang" jerry.zhang@datoms.cn 
 
 WORKDIR /usr/src/app
 ENV RAILS_ROOT $WORKDIR
