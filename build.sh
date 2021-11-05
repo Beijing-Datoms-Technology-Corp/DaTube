@@ -1,7 +1,7 @@
 #!/bin/bash
 
-CONTAINER="sc-base"
-REPOSITORY="semcon"
+CONTAINER="mydata_container"
+REPOSITORY="mydata_repo"
 
 # read commandline options
 BUILD_CLEAN=false
