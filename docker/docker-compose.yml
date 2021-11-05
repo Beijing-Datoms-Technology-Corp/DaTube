@@ -1,5 +1,5 @@
 sc:
-  image: semcon/sc-base
+  image: Beijing-Datoms-Technology-Corp/DaTube
   env_file: .env
   environment:
     RAILS_ENV: production
