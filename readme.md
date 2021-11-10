@@ -1,7 +1,7 @@
 # 用途
 为数据买卖双方提供端-端的交付。
 
-更多信息，查看: https://www.datoms.cn/datube.html
+更多信息，查看: https://www.datoms.cn/DaTube.html
 
 ## 使用方法
 
